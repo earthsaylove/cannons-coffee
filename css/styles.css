@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --color: #000000;
+  --color1: #000000;
   --color2: #06327d;
   --color3: #2b70e4;
   --color4: #209d5c;
   --color5: #ffd034;
   --color6: #ffffff;
   --color7: #cadbf8;
-  --font1: font-family: "Montserrat", sans-serif;
+  --font1: "Montserrat", sans-serif;
 
 }
 
@@ -24,16 +24,64 @@ html {
 
 body {
   color: black;
-  background-color: #063270;
-  font: var(--font1);
+  background-color: var(--color3);
+  font-family: var(--font1);
   font-size: 1.125rem;
   line-height: 1.5;
   margin: 0;
-
 }
+
+header {
+  padding: 2rem;
+  color: var(--color6);
+  background-color: var(--color2);
+  border-bottom: 10px solid var(--color5);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  color: var(--color1);
+}
+
+a {
+  color: var(--color6); 
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 h1 {
@@ -64,10 +112,27 @@ h3 {
   color: var(--color6);
 }
 
-.button-primary {
+.button-primary { 
   background-color: var(--color4);
 }
 
 .button-secondary {
   background-color: var(--color2);
+}
+
+@media (min-width: 650px) {
+  .brand {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav {
+    align-self: flex-end;
+  }
 }
