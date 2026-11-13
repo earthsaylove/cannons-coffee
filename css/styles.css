@@ -24,7 +24,7 @@ html {
 
 body {
   color: black;
-  background-color: var(--color3);
+  background-color: var(--color2);
   font-family: var(--font1);
   font-size: 1.125rem;
   line-height: 1.5;
@@ -32,16 +32,15 @@ body {
 }
 
 header {
-  padding: 2rem;
   color: var(--color6);
   background-color: var(--color2);
-  border-bottom: 10px solid var(--color5);
-}
-
-.header-content {
+  border-bottom: 5px solid var(--color5);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   gap: 1rem;
 }
 
@@ -52,6 +51,7 @@ header img {
 
 header h1 {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 nav {
@@ -63,6 +63,7 @@ nav {
 
 nav a {
   text-decoration: none;
+  font-size: 2rem;
 }
 
 .brand {
@@ -70,18 +71,37 @@ nav a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  color: var(--color1);
+  color: var(--color6);
 }
 
 a {
   color: var(--color6); 
   text-transform: uppercase;
   font-size: 1rem;
+}
+
+main {
+  max-width: 1200px;
+  margin:auto;
+}
+
+.hero {
+  background-color: var(--color6);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.hero-text {
+  padding: 48px;
 }
 
 h1 {
@@ -105,7 +125,7 @@ h3 {
 
 .button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem;
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;
@@ -121,18 +141,37 @@ h3 {
 }
 
 @media (min-width: 650px) {
+  header {
+    align-items: center;
+  }
   .brand {
     flex-direction: row;
     gap: 1rem;
   }
+
+  header h1 {
+    padding-bottom: 0;
+  }
+  .hero {
+    flex-direction: row;
+    flex: 1;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  nav a {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 1000px) {
-  .header-content {
+    header {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
   }
-  nav {
-    align-self: flex-end;
+
+  nav a {
+    font-size: 1rem;
   }
 }
