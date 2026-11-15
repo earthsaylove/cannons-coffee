@@ -22,6 +22,11 @@ html {
   box-sizing: inherit;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 body {
   color: black;
   background-color: var(--color2);
@@ -35,8 +40,8 @@ header {
   color: var(--color6);
   background-color: var(--color2);
   border-bottom: 5px solid var(--color5);
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px;
+  margin: 0 auto; */
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -63,7 +68,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .brand {
@@ -80,10 +85,10 @@ a {
   font-size: 1rem;
 }
 
-main {
+/* main {
   max-width: 1200px;
   margin:auto;
-}
+} */
 
 .hero {
   background-color: var(--color6);
@@ -113,13 +118,13 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.75rem;
-  font-weight: 300;
+  font-weight: 700;
   text-transform: none;
 }
 
@@ -140,6 +145,25 @@ h3 {
   background-color: var(--color2);
 }
 
+.coffee {
+  background-color: var(--color7);
+  padding: 1rem;
+}
+
+.coffee img {
+  max-width: 100%;
+  height: auto;
+  /* display: flex;
+  flex-direction: column;
+  gap: 1.5rem; */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
 @media (min-width: 650px) {
   header {
     align-items: center;
@@ -154,13 +178,30 @@ h3 {
   }
   .hero {
     flex-direction: row;
-    flex: 1;
+    align-items: center;
     padding-top: 0;
     padding-left: 0;
     padding-bottom: 0;
   }
+
+ .hero img,
+  .hero-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-text {
+    padding: 1.5rem;
+  }
+
   nav a {
     font-size: 1.25rem;
+  }
+  .coffee {
+    padding: 1rem;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -173,5 +214,11 @@ h3 {
 
   nav a {
     font-size: 1rem;
+  }
+   .coffee {
+   padding: 1rem;
+  }
+   .cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
